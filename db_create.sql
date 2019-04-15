@@ -19,26 +19,26 @@ CREATE TABLE `user_profile` (
 
   `username` varchar(50) NOT NULL,
 
-    `password` varchar(50) NOT NULL,
+    `password` varchar(255) NOT NULL,
 
-  `jobtitle` varchar(50) NOT NULL,
+  `jobtitle` varchar(50),
 
-    `company` varchar(50) NOT NULL,
+    `company` varchar(50),
 
-  `job_desc` varchar(250) NOT NULL,
+  `job_desc` varchar(250),
 
-    `telephone` varchar(250) NOT NULL,
+    `telephone` varchar(250),
 
-  `linkedin` varchar(250) NOT NULL,
+  `linkedin` varchar(250),
 
-    `instagram` varchar(250) NOT NULL,
+    `instagram` varchar(250),
 
-  `twitter` varchar(250) NOT NULL,
+  `twitter` varchar(250),
 
-    `facebook` varchar(250) NOT NULL,
-    `time_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)
+    `facebook` varchar(250)
 
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+                            )
+
 
 
 

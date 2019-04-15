@@ -65,7 +65,7 @@ if(isset($_POST['register'])) {
                     ':lastname' => $lastname,
                     ':email' => $email,
                     ':username' => $username,
-                    ':password' => $password,
+                    ':password' => password_hash($password,PASSWORD_DEFAULT)
 
 
                     /*':jobtitle' => $jobtitle,

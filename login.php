@@ -13,6 +13,7 @@
 		if($password == '')
 			$errMsg = 'Enter password';
 
+
 		if($errMsg == '') {
 			try {
 				$stmt = $connect->prepare('SELECT id, firstname, lastname, email, username, password, jobtitle, company, job_desc, telephone, linkedin, twitter, instagram, facebook FROM user_profile WHERE username = :username');
@@ -25,7 +26,7 @@
 					$errMsg = "User $username not found.";
 				}
 				else {
-					if($password == $data['password']) {
+					if(password_verify($password, $data['password'])) {
 						$_SESSION['firstname'] = $data['firstname'];
                         $_SESSION['lastname'] = $data['lastname'];
                         $_SESSION['email'] = $data['email'];

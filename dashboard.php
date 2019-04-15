@@ -2,6 +2,7 @@
 	require 'config.php';
 	if(empty($_SESSION['firstname']))
 		header('Location: dashboard.php');
+if(empty($_SESSION['username']))
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +60,8 @@
                 <a href="update_profile1.php">View your Details</a> <br>
                 <a href="viewcontact.php">View contacts</a> <br>
 				<a href="logout.php">Logout</a> <br>
+
+    <a href="delete_account.php?id=<?php echo $_SESSION['username']; ?>"> Delete</a>
 
 			</div>
 		</div>
