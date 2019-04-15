@@ -61,7 +61,7 @@ if(empty($_SESSION['username']))
                 <a href="viewcontact.php">View contacts</a> <br>
 				<a href="logout.php">Logout</a> <br>
 
-    <a href="delete_account.php?id=<?php echo $_SESSION['username']; ?>"> Delete</a>
+    <a href="delete_account.php?id=<?php echo $_SESSION['username']; ?>"> Delete Account</a>
 
 			</div>
 		</div>
