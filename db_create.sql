@@ -41,5 +41,19 @@ CREATE TABLE `user_profile` (
 
 
 
+CREATE TABLE `contacts`
 
+  ADD CONSTRAINT `FK_contacts_user_profile` FOREIGN KEY (`username_contact`) REFERENCES `user_profile` (`username`),
+  ADD CONSTRAINT `FK_contact_username2_user_profile` FOREIGN KEY (`username`) REFERENCES `user_profile` (`username`);
 
+CREATE TABLE `contacts`(
+  `id` int(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+
+  `username` varchar(50) NOT NULL,
+
+  `username_contact` varchar(50) NOT NULL,
+
+  CONSTRAINT `FK_contacts_user_profile` FOREIGN KEY (`username_contact`) REFERENCES `user_profile` (`username`),
+  CONSTRAINT `FK_contact_username2_user_profile` FOREIGN KEY (`username`) REFERENCES `user_profile` (`username`)
+
+)

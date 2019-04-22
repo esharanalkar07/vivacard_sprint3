@@ -2,15 +2,15 @@
 session_start();
 
 // Define database
-define('dbhost', 'localhost');
-define('dbuser', 'root');
-define('dbpass', 'root');
-define('dbname', 'db1712499_group-e');
+define('dbhost', 'csdm-webdev');
+define('dbuser', '1614072');
+define('dbpass', '1614072');
+define('dbname', 'db1614072_group-e');
 
 
 // Connecting database
 try {
-    $connect = new PDO('mysql:host=localhost;port=3307; dbname=db1712499_group-e', dbuser, dbpass);
+    $connect = new PDO('mysql:host=csdm-webdev; dbname=db1614072_group-e', dbuser, dbpass);
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e) {

@@ -1,9 +1,9 @@
 <?php
 require 'config.php';
-
-if(isset($error)){ echo $error; } /// figure out later (check)
+if (IsSet($_SESSION["username"]))
+    $username=$_SESSION["username"];
  
- $sql = "SELECT * FROM user_profile"; // filter out user list as per your added contacts - SPRINT 3
+ $sql = "SELECT * FROM contacts, user_profile WHERE contacts.username_contact=user_profile.username AND contacts.username='$username'"; // filter out user list as per your added contacts - SPRINT 3
  $result = $connect->query($sql);
  ?>
 <!DOCTYPE html>
